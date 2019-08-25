@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'iran';
+  src: url('../../fonts/y-i/Yekan.ttf');
+}
+@font-face {
+  font-family: 'iran';
+  src: url('../../fonts/y-i/IRANSans.ttf');
+}
+* {
+  text-align: right;
+}
+hr {
+  background: rgba(255, 255, 255, 0.3);
+  margin-bottom: 15px;
+}
+.menu-holder {
+  transition: 0.5s;
+  padding: 0;
+  font-family: iran;
+  background: linear-gradient(
+    -45deg,
+    rgba(2, 78, 255, 1),
+    rgba(110, 153, 254, 1)
+  );
+}
+.content-holder {
+  transition: 0.5s;
+}
+input {
+  display: none;
+}
+.navigation {
+  margin: 5px;
+  padding: 0 15px;
+  width: 250px;
+}
+.nav-side {
+  margin: 5px;
+  padding: 0 15px;
+  width: 70px;
+}
+/* change mode of menu  */
+
+.navigation > .change-mode {
+  line-height: 54px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  height: 35px;
+}
+
+/*   style of secound row in menu = profile section  */
+li {
+  font-size: 13px;
+  color: #fff;
+}
+
+li i:not(.down) {
+  font-size: 15px;
+  padding: 2px 0 5px 15px;
+}
+.li-btn {
+  margin: 10px 0;
+  height: 38px;
+}
+.li-dropdown {
+  margin: 10px 0;
+  position: relative;
+}
+li > label {
+  padding: 8px 5px 0 0;
+  cursor: pointer;
+  margin-bottom: 0;
+  text-indent: 5px;
+}
+/*  li-dropdown  */
+.li-dropdown img.profile {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  margin-left: 5px;
+}
+.li-dropdown i.down {
+  font-size: 10px;
+  border-radius: 100%;
+  position: absolute;
+  left: 5px;
+  top: 17px;
+}
+.li-dropdown > label > span {
+  padding: 0 5px;
+  padding: 10px 0px 10px 30px;
+}
+/* submenu content  */
+li > .content {
+  background: rgba(255, 255, 255, 0.2);
+  margin-right: -20px;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.col-md-2 li > .content {
+  width: 122%;
+}
+.col-md-1 li > .content {
+  width: 150%;
+}
+li > .content.customers {
+  margin-top: 10px;
+}
+li > .content > a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  border-right: 4px solid rgba(255, 255, 255, 0);
+  font-size: 12px;
+  line-height: 28px;
+  text-indent: 20px;
+}
+li > .content > a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-right: 4px solid #fff;
+}
+
+.li-dropdown > input:checked ~ .profile {
+  height: 84px;
+  margin-top: 10px;
+}
+.li-dropdown > input:checked ~ .customers {
+  height: 56px;
+  margin-top: 10px;
+}
+
+.li-btn > label {
+  display: block;
+  height: 40px;
+  line-height: 24px;
+  transition: 0.1s;
+  border-radius: 5px;
+}
+.col-md-1 .li-btn > label {
+  text-align: center;
+}
+.li-btn > input:checked ~ label {
+  background: white;
+  color: #024eff;
+  box-shadow: 0 5px 13px -5px #024eff;
+  border-radius: 5px;
+}
+
+/* unactive kardane menu-title ha*/
+.col-md-1 li span {
+  display: none;
+}
+
+/* row 1  style */
+.col-md-2 .change-mode > span {
+  font-size: 13px;
+  float: right;
+  text-indent: 10px;
+}
+.col-md-1 .change-mode > span {
+  display: none;
+}
+/*icon*/
+.menu-icon {
+  font-size: 20px;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.5s;
+  border: 0 none;
+}
+
+.col-md-1 .change-mode > .menu-icon {
+  left: 32%;
+  top: 4px;
+  transform: rotate(90deg);
+}
+.col-md-2 .change-mode > .menu-icon {
+  left: 0;
+  top: 14px;
+  transform: rotate(0deg);
+}
+/**/
+
+.col-md-1 li i {
+  font-size: 20px;
+}
+.col-md-2 li i {
+  font-size: 17px;
+}

@@ -1,0 +1,36 @@
+.form-holder {
+    padding-top: 30px;
+}
+
+.btn-holder.date {
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bolder;
+    border-radius: 50px;
+    color: #fff;
+    box-shadow: none;
+    opacity: .8;
+}
+
+    .btn-holder.date > input {
+        color: #fff;
+    }
+
+    .btn-holder.date.active,
+    .btn-holder.date:hover {
+        opacity: 1;
+        box-shadow: 0px 10px 15px #e0e0e0;
+    }
+
+.btn-holder.today {
+    background: linear-gradient(120deg,#FF7AF5,#513162);
+}
+
+.btn-holder.month {
+    background: linear-gradient(120deg,#FCCF31,#F55555);
+}
+
+.btn-holder.year {
+    background: linear-gradient(120deg,#5EFCE8,#736EFE);
+}

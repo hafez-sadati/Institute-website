@@ -1,0 +1,438 @@
+.form-holder {
+  border-top: 4px solid #6e99fe;
+  width: 100%;
+  padding: 15px 40px 50px 40px;
+  margin-bottom: 50px;
+  position: relative;
+  box-shadow: 0px 15px 25px #eaeaea;
+  border-radius: 0 0 7px 7px;
+}
+hr.section-form {
+  background: #f8f8f8;
+  border: 0 none;
+  height: 1px;
+}
+/*   title of form  */
+div.title {
+  position: absolute;
+  top: -17px;
+  font-size: 15px;
+}
+div.title > label.titleText {
+  margin: 0;
+  padding: 0;
+  background: white;
+  border-radius: 7px;
+  padding: 3px 10px 0 10px;
+  color: #6e99fe;
+}
+.title > .titleText > h1 {
+  font-size: 17px;
+}
+
+/*  input   */
+/*اینپوت مربوط به خود اینپوت تایپ تکست*/
+.input {
+  direction: rtl;
+  padding: 7px 10px;
+  width: 100%;
+  height: 44px;
+  border: 0 none;
+  border-radius: 7px;
+  font-size: 13px;
+  color: #9e9e9e;
+  transition: 0.5s;
+}
+.inpNormal:focus {
+  border-color: rgb(146, 201, 247);
+  box-shadow: 0px 10px 15px #eff8fe;
+}
+.inpNormal:focus ~ .input-titleBackStyle {
+  color: #2196f3;
+}
+/* باکسی که توش اینپوت و داداشاش و یچهاش قرار میگیره */
+.input-boxStyle {
+  border-radius: 7px;
+  position: relative;
+  height: 44px;
+  transition: 0.5s;
+  font-size: 13px;
+}
+/* متن هشدار ارور */
+.inputAlarm-error {
+  color: #cacaca;
+  font-size: 12px;
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+  display: none;
+  transition: 0.5s;
+}
+
+/*پس زمینه ی عنوان هر اینپوت*/
+.input-titleBackStyle {
+  background: #fff;
+  height: 20px;
+  padding: 2px 10px;
+  position: absolute;
+  right: 11px;
+  top: -14px;
+  font-weight: bolder;
+  transition: 0.5s;
+}
+
+/* استایل های حالت مختلف اینپوت */
+.inpNormal {
+  border: 1px solid #d3d3d3;
+}
+.inpError {
+  border: 1px solid #fe6e6e;
+  background: url('../../images/close.png') no-repeat 5% 50%;
+  background-size: 12px;
+}
+.inpError ~ .inputAlarm-error {
+  display: block;
+}
+
+/*استایل های مختلف متن عنوان هر اینپوت*/
+.titleNormal {
+  color: #979dad;
+}
+.titleError {
+  color: #fe6e6e;
+}
+
+/*فاصله برای اینپوت ها*/
+.inputMargin {
+  margin: 35px 0;
+}
+.sectionMargin {
+  margin: 60px 0 0 0;
+}
+
+/* سمت راست :  عنوان برای هر دسته از اینپوت ها  */
+.titr {
+  font-size: 12px;
+  color: #bdc5de;
+  line-height: 40px;
+}
+
+/*    button     */
+.btn-holder {
+  cursor: pointer;
+  transition: 0.5s;
+  height: 40px;
+  border-radius: 7px;
+  text-align: center;
+  line-height: 42px;
+}
+.btn-holder input {
+  cursor: pointer;
+}
+.btn-holder.fillBtn {
+  background: linear-gradient(120deg, rgb(101, 183, 107), rgb(67, 159, 72));
+  box-shadow: 0px 15px 20px #eaeaea;
+}
+.btn-holder.outlineBtn:hover {
+  background: rgb(247, 247, 247);
+}
+.fillBtn > input {
+  color: #fff;
+}
+.outlineBtn > input {
+  color: #bdc5de;
+}
+
+.btn-holder.fillBtn:hover {
+  box-shadow: none;
+}
+/*    button     */
+
+.inputfile ~ label > i {
+  padding: 0 5px;
+}
+
+.inputfile {
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  cursor: pointer;
+}
+.inputfile + label {
+  transition: 0.5s;
+  background: linear-gradient(120deg, rgb(110, 153, 254), rgb(2, 78, 255));
+  width: 100%;
+  height: 45px;
+  color: #fff;
+  border-radius: 7px;
+  text-align: center;
+  line-height: 42px;
+  box-shadow: 0px 15px 20px #eaeaea;
+  display: inline-block;
+  cursor: pointer;
+}
+.inputfile + label:hover {
+  box-shadow: none;
+}
+
+.inputfile:focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+.inputfile + label * {
+  pointer-events: none;
+}
+/*    radio button         */
+/* Customize the label (the container) */
+.contain {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: block;
+}
+
+/* Hide the browser's default radio button */
+.contain input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  right: -15px;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.contain:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.contain input:checked ~ .checkmark {
+  background-color: #eee;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.contain input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.contain .checkmark:after {
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2196f3;
+}
+.radio-btn {
+  color: #979dad;
+  font-size: 13px;
+  font-weight: bolder;
+  text-indent: 10px;
+}
+
+/* بخش پیش نمایش تصویر */
+.preViewImage {
+  height: 200px;
+  width: 100%;
+  float: right;
+  overflow: hidden;
+  background: rgb(233, 233, 233);
+  border-radius: 7px;
+}
+.preViewImage > img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+.preViewImage > img:hover {
+  opacity: 1;
+}
+/* استایل نمایش و عدم نمایش : چک باکس*/
+.checkShow {
+  font-size: 13px;
+  color: #979dad;
+  width: 54px;
+  height: 17px;
+  background: #f5f5f5;
+  border-radius: 50px;
+  position: relative;
+}
+/*اون خطی که دکمه ی دایره ای دنبال میکنه تا بره به سمت دیگه*/
+.checkShow:before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  height: 2px;
+  width: 34px;
+  background: #fff;
+  left: 10px;
+}
+/* دکمه ی دایره */
+.checkShow label {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: -2px;
+  z-index: 1;
+  left: 0px;
+  background: #d7d7d7;
+}
+.checkShow span.show {
+  position: absolute;
+  right: -60px;
+  z-index: 1;
+}
+.checkShow span.hide {
+  position: absolute;
+  left: -80px;
+  z-index: 1;
+}
+.checkShow input {
+  opacity: 0;
+}
+.checkShow input[type='checkbox'] {
+  position: absolute;
+  z-index: 10;
+  right: -89px;
+  top: -3px;
+  display: block;
+  width: 264px;
+  height: 33px;
+}
+/* رویداد کلیک */
+.checkShow input[type='checkbox']:checked + label {
+  left: 32px;
+  background: #2196f3;
+}
+/*----------------------------------------------  select option  -------------------------------------------------------*/
+
+/*the container must be positioned relative:*/
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: '';
+  top: 10px;
+  right: 7px;
+  width: 17px;
+  height: 12px;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+  transform: rotate(180deg);
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  top: 21px;
+  border-color: transparent transparent #fff transparent;
+}
+
+/*style the items (options), including the selected item:*/
+.select-selected {
+  color: #979dad;
+  padding: 13px 8px;
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+}
+.select-items div {
+  font-weight: normal;
+  font-size: 12px;
+  padding: 16px 13px;
+  color: #bdbdbd;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  overflow: hidden;
+  background-color: #fff;
+  top: 105%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  cursor: pointer;
+  border-radius: 7px;
+  box-shadow: 0px 10px 15px #eaeaea;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: #eff8fe;
+  color: #979dad;
+}
+
+/*  **** tooltip *****   */
+
+.tooltipHolder {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltipHolder .tooltipText {
+  visibility: hidden;
+  background-color: rgba(33, 149, 243, 0.8);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 20px;
+  position: absolute;
+  z-index: 1;
+  font-size: 13px;
+  top: 4px;
+  right: 90%;
+}
+
+.tooltipHolder .tooltipText::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgba(33, 149, 243, 0.8);
+}
+.tooltipHolder:hover .tooltipText {
+  visibility: visible;
+}

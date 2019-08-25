@@ -1,0 +1,15 @@
+.linkInput{
+   /* width:675px;*/
+}
+.rateInput{
+    /*width: 200px;*/
+}
+.timeInput{
+    width: 80%;
+}
+.inputfile + label{
+   /* width:92%;*/
+}
+.preViewImage{
+  width: auto;
+}

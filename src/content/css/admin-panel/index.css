@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'iran';
+  src: url('../../fonts/y-i/Yekan.ttf');
+}
+
+@font-face {
+  font-family: 'iran';
+  src: url('../../fonts/y-i/IRANSans.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'iran' !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+/*
+   * Content
+*/
+
+[role='main'] {
+  padding-top: 48px; /* Space for fixed navbar */
+  background: url('../../images/light-grey-terrazzo.png') repeat center center
+    fixed;
+}
+
+.copyright {
+  color: white;
+  font-size: 13px;
+}
+
+.socialmedia {
+  color: white;
+}

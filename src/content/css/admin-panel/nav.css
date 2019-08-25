@@ -1,0 +1,353 @@
+@font-face {
+  font-family: 'iran';
+  src: url('../../fonts/y-i/Yekan.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'iran';
+  src: url('../../fonts/y-i/IRANSans.ttf') format('truetype');
+}
+body {
+  direction: rtl;
+  text-align: right;
+  margin: 0;
+  font-family: iran;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+hr {
+  margin: 0;
+  margin: 4px;
+  border-color: rgb(110, 153, 254);
+}
+.menu-holder {
+  position: relative;
+  height: 800px;
+  width: 250px;
+  float: right;
+  transition: 0.5s;
+  border-radius: 7px;
+  margin: 10px;
+  overflow: auto;
+  padding: 15px 15px 35px 15px;
+  box-shadow: 0 5px 13px -5px #024eff;
+  background: linear-gradient(-45deg, rgb(2, 78, 255), rgb(110, 153, 254));
+}
+
+.open-mode {
+  width: 250px;
+}
+.close-mode {
+  width: 100px;
+}
+
+/*           o p e n            */
+.menu-holder li {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 10px 0;
+  position: relative;
+}
+.close-mode label > span {
+  position: absolute;
+  transition: 0.5s;
+  display: inline-block;
+  transform: translateX(-160px);
+  animation: anim2 0.5s;
+}
+@keyframes anim2 {
+  0% {
+    opacity: 1;
+    visibility: show;
+  }
+  1% {
+    opacity: 0;
+    visibility: show;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.open-mode li span {
+  transform: translateX(0px);
+  display: inline-block;
+  /* transition: 0.5s; */
+}
+.menu-holder li label {
+  padding: 8px 5px 0 0;
+  cursor: pointer;
+  margin-bottom: 0;
+  text-indent: 5px;
+}
+
+input[type='radio'] {
+  display: none;
+}
+/*  o p e n   -- > change-mode */
+.menu-holder li.change-mode {
+  color: #ffffff;
+  position: relative;
+  height: 45px;
+  overflow: hidden;
+}
+.menu-holder li.change-mode .menu-icon {
+  position: absolute;
+  left: 0;
+  padding: 14px 15px 10px 13px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.close-mode li.change-mode .menu-icon {
+  transform: rotate(90deg);
+  margin-top: 20px;
+  margin-left: 7px;
+  top: -10px;
+  left: 12px;
+}
+.menu-holder li.change-mode > span {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 47px;
+  transform: translateX(0px);
+  transition: 0.5s;
+  display: inline-block;
+}
+
+.close-mode li.change-mode > span {
+  transform: translateX(155px);
+  transition: 0.5s;
+}
+
+/*  o p e n   -- >  li-btn */
+.menu-holder .li-btn {
+  height: 35px;
+  font-size: 13px;
+}
+.menu-holder .li-btn > label {
+  border-radius: 7px;
+  transition: 0.3s;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+}
+.open-mode li > label > i:not(.down) {
+  font-size: 17px;
+  margin-left: 15px;
+}
+.close-mode li > label > i:not(.down) {
+  font-size: 20px;
+  margin-right: 8px;
+}
+.menu-holder .li-btn > input:checked ~ label {
+  background: #ffffff;
+  color: #024eff;
+  box-shadow: 0 5px 13px -5px #024eff;
+}
+/*  o p e n   -- >  li-dropdown */
+.menu-holder .li-dropdown > label {
+  font-size: 13px;
+  display: block;
+}
+
+.menu-holder .li-dropdown > label > img {
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  margin-right: -5px;
+  position: relative;
+  z-index: 10;
+}
+.menu-holder .li-dropdown > label > i.down {
+  font-size: 10px;
+  float: left;
+  margin: 10px 0px 0px 11px;
+}
+.close-mode .li-dropdown > label > i.down {
+  font-size: 8px;
+  margin: 9px 0px 0px 0px;
+}
+
+.menu-holder .li-dropdown > .content {
+  background: rgba(255, 255, 255, 0.2);
+  margin-right: -16px;
+  width: 114%;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+
+.close-mode .li-dropdown > .content {
+  width: 145%;
+}
+
+.open-mode .li-dropdown > input:checked ~ .content.three-sub {
+  height: 91px;
+}
+.close-mode .li-dropdown > input:checked ~ .content.three-sub {
+  height: 93px;
+}
+.open-mode .li-dropdown > input:checked ~ .content.two-sub {
+  height: 57px;
+}
+.close-mode .li-dropdown > input:checked ~ .content.two-sub {
+  height: 61px;
+}
+.menu-holder .li-dropdown > .content > a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 11px;
+  border-right: 4px solid;
+  border-color: rgba(255, 255, 255, 0);
+}
+.open-mode .li-dropdown > .content > a {
+  text-indent: 60px;
+}
+.close-mode .li-dropdown > .content > a {
+  text-indent: 15px;
+}
+.menu-holder .li-dropdown > .content > a:hover {
+  border-right: 4px solid;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+.menu-holder .li-dropdown > .content label {
+  display: block;
+  height: 30px;
+  width: 110%;
+  margin: 0;
+  margin-right: -3px;
+  text-indent: 15px;
+}
+.menu-holder .li-dropdown > .content input:checked ~ label {
+  background: #ffffff;
+  color: #024eff;
+}
+
+/*    content     address-bar  */
+.content-holder {
+  float: right;
+  margin-right: 0;
+  transition: 0.5s;
+  padding: 30px 15px;
+  height: 90px;
+}
+.open-mode ~ .container-fluid .content-holder {
+  width: 81%;
+}
+.close-mode ~ .container-fluid .content-holder {
+  width: 90%;
+}
+.content-holder .address-bar {
+  font-size: 12px;
+  padding: 0 20px;
+  height: 50px;
+  line-height: 32px;
+}
+.content-holder .col-xs-12 > .address-bar {
+  padding: 0;
+  margin: 0;
+}
+.content-holder .address-bar a {
+  color: #99b8ff;
+  text-decoration: none;
+}
+.content-holder .address-bar span {
+  color: #c3c3c3;
+  padding: 0px 2px;
+}
+/* content  --> icon-navbar   */
+.icon-navbar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 0 15px;
+}
+.icon-navbar > li {
+  float: left;
+  padding: 5px 10px;
+  cursor: pointer;
+  position: relative;
+}
+.icon-navbar > li > i {
+  color: white;
+  font-size: 17px;
+  color: #a8a8a8;
+}
+.icon-navbar > li:hover > i {
+  color: #ccc;
+}
+.icon-navbar > .bell > span {
+  background: #024eff;
+  font-size: 13px;
+  padding: 4px;
+  border-radius: 100%;
+  position: absolute;
+  height: 16px;
+  line-height: 9px;
+  left: 5px;
+  top: 3px;
+  color: white;
+}
+
+/*  responsive -> open-mode */
+
+.responsive-mode.res-open-mode {
+  height: 100%;
+  padding: 10px 20px;
+  width: 60%;
+  margin: 0;
+  border-radius: 0;
+  margin-left: 20px;
+}
+.menu-holder.responsive-mode {
+  background: linear-gradient(-45deg, rgb(2, 78, 255), rgb(110, 153, 254));
+}
+
+.responsive-mode {
+  width: 65px;
+  padding: 0;
+  margin-right: -10px;
+  margin-left: 0;
+  height: 60px;
+}
+.responsive-mode li.change-mode .menu-icon {
+  left: 7px;
+  bottom: 5px;
+  color: #fff;
+}
+
+.responsive-mode li.change-mode > span {
+  display: none;
+}
+.responsive-mode li.change-mode ~ li {
+  display: none;
+}
+.res-open-mode li.change-mode ~ li {
+  display: block;
+  color: #fff;
+}
+.responsive-mode.res-open-mode li.change-mode .menu-icon {
+  transform: rotate(90deg);
+}
+.menu-holder.res-open-mode .li-btn {
+  height: 50px;
+}
+.menu-holder.res-open-mode li:not(li > .content) {
+  font-size: 15px;
+  line-height: 35px;
+}
+.menu-holder.res-open-mode .li-btn i {
+  padding-left: 10px;
+  font-size: 21px;
+  position: relative;
+  top: 5px;
+}
+.responsive-mode.close-mode label > span {
+  transform: translateX(0px);
+}

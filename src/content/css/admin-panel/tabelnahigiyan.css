@@ -1,0 +1,519 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* FONTS */
+
+@font-face {
+  src: url(../../fonts/IRANSans.ttf);
+  font-family: 'irsans';
+}
+
+@font-face {
+  src: url(../../fonts/IRANSansBold.ttf);
+  font-family: 'irsans-bold';
+}
+
+/* TABULAR LIST */
+
+.my-courses {
+  width: 80%;
+  /* padding-right: 3vw; */
+  margin: 0px auto;
+}
+
+.tabular-list {
+  width: 100%;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 0 1vw;
+}
+
+.tabular-list .row {
+  cursor: pointer;
+  background: #fff;
+  transition: 0.2s;
+}
+tbody .row {
+  line-height: 44px;
+  margin-bottom: 20px !important;
+}
+
+.tabular-list .row:not(.table-header):hover {
+  transform: scale(1.02);
+}
+
+.table-header {
+  font-size: 1vw;
+  font-weight: 800;
+}
+
+.table-header > .col {
+  padding-bottom: 2vw;
+}
+
+.col {
+  vertical-align: middle;
+  padding: 0.6vw 0;
+  font-size: 1.1vw;
+}
+
+.tabular-list .row:not(.table-header) {
+  box-shadow: 0.3vw 0.3vw 1.1vw 0.075vw rgba(0, 0, 0, 0.06);
+  border-radius: 0.8vw;
+}
+
+.col.pic-col {
+  width: 5vw;
+}
+
+.col:first-child {
+  padding-right: 0.7vw;
+  border-radius: 0 0.8vw 0.8vw 0;
+}
+
+.col:last-child {
+  padding-left: 0.7vw;
+  border-radius: 0.8vw 0 0 0.8vw;
+}
+
+.col .pic-box {
+  width: 5vw;
+  height: 3vw;
+  overflow: hidden;
+  border-radius: 0.4vw;
+  position: relative;
+  right: 50px;
+}
+
+.col .item-pic {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.item-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.item-btn > img {
+  height: 2.3vw;
+}
+
+/* PAGINATION */
+
+.pagination {
+  margin-top: 3vw;
+  direction: ltr;
+  text-align: center;
+}
+
+.page-number {
+  display: inline-block;
+  background: #f1f1f1;
+  padding: 0.5vw 1vw;
+  border-radius: 0.4vw;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 1vw;
+  margin-top: 5px;
+}
+
+.page-number:not(.selected):hover {
+  transform: translateY(-0.3vw);
+}
+
+.page-number.selected {
+  background: #fff;
+  box-shadow: 0.2vw 0.2vw 1vw 0.075vw rgba(0, 0, 0, 0.06);
+  cursor: default;
+}
+
+.background-shape {
+  height: 30vw;
+  display: block;
+  position: absolute;
+  top: 10vw;
+  left: -3vw;
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+  z-index: -1;
+}
+
+/* FORM */
+
+.add-course {
+  width: 75%;
+  padding-right: 3vw;
+}
+
+.form {
+  box-shadow: 0.43vw 0.58vw 1.81vw 0.075vw rgba(39, 34, 34, 0.06);
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 0.8vw;
+}
+
+.input-box {
+  margin: 2vw auto 0 auto;
+  width: 50%;
+}
+
+.form-data {
+  background: #f5f3f4;
+  border-radius: 50vw;
+  display: block;
+  padding: 3%;
+  width: 100%;
+  margin-top: 3%;
+  font-size: 1.1vw;
+}
+
+.form-title {
+  font-size: 1.2vw;
+  font-weight: 800;
+  margin-bottom: 2vw;
+}
+
+.form-select {
+  position: relative;
+}
+
+.form-select-value {
+  display: block;
+  padding: 4.5%;
+  font-size: 1vw;
+}
+
+.form-options {
+  border-radius: 2vw;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  max-height: 0;
+  transition: 0.3s;
+}
+
+.form-select.open .form-options {
+  max-height: 400px;
+}
+
+.form-option {
+  padding: 1vw 0;
+  font-size: 0.8vw;
+}
+
+.form-option:hover {
+  background: #ebebeb;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
+}
+
+.arrow.up {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #444;
+}
+
+.arrow.down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #444;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 960px) {
+  /* .my-courses {
+      width: 80%;
+  }
+
+  .panel-menu{
+      width: 20%;
+  }
+
+  .panel-menu-item{
+      width: 80%;
+      font-size: .7rem;
+  } */
+  .col .item-pic {
+    position: unset;
+    top: unset;
+    right: unset;
+  }
+  tbody .row {
+    line-height: unset;
+  }
+  .panel {
+    margin-top: 150px;
+  }
+  .panel-menu {
+    width: 450px;
+    margin: 0 auto;
+    min-height: 400px;
+    padding-bottom: 50px;
+    border-radius: 15px;
+  }
+  .panel .flex-parent {
+    display: block;
+  }
+  .user-full-name {
+    font-size: 1.3rem;
+  }
+  .panel-menu .pic-box {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+  }
+  .panel-menu-items {
+    margin-top: 50px;
+  }
+  .panel-menu-item {
+    font-size: 0.9rem;
+    padding: 13px 30px 13px 0;
+    width: 90%;
+    border-radius: 0 50px 50px 0;
+  }
+  .panel-menu-item.selected::before {
+    height: 30px;
+    background-size: 20px;
+  }
+  .panel-menu-item.selected::after {
+    height: 30px;
+    background-size: 20px;
+  }
+  .my-courses {
+    width: 100%;
+    margin-top: 70px;
+    padding: 0;
+  }
+  .table-header {
+    display: none;
+  }
+  .tabular-list .row {
+    display: block;
+    width: 450px;
+    text-align: right;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 0 auto;
+  }
+  .tabular-list .row:not(:nth-child(2)) {
+    margin-top: 35px;
+  }
+  .tabular-list .row:not(.table-header) {
+    box-shadow: 3px 4px 15px 1px rgba(0, 0, 0, 0.06);
+    border-radius: 15px;
+  }
+  .col {
+    display: block;
+    font-size: 0.9rem;
+    padding: 0;
+    margin-bottom: 13px;
+  }
+  .col.pic-col {
+    width: 100%;
+  }
+  .col .pic-box {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+  }
+  .col:not(.pic-col)::before {
+    font-size: 0.7rem;
+    display: block;
+    margin-bottom: 10px;
+    color: #999;
+  }
+  .col.name-col::before {
+    content: 'نام';
+  }
+  .col.level-col::before {
+    content: 'سطح';
+  }
+  .col.start-date-col::before {
+    content: 'تاریخ آغاز';
+  }
+  .col.status-col::before {
+    content: 'وضعیت';
+  }
+  .col.email-col::before {
+    content: 'ایمیل';
+  }
+  .col.birth-date-col::before {
+    content: 'تاریخ تولد';
+  }
+  .col:first-child {
+    padding-right: 0;
+    border-radius: 0;
+  }
+  .col:last-child {
+    padding-left: 0;
+    border-radius: 0;
+  }
+  .pagination {
+    margin-top: 50px;
+  }
+  .page-number {
+    font-size: 1rem;
+    padding: 10px 13px;
+    border-radius: 5px;
+  }
+  .background-shape {
+    display: none;
+  }
+  .item-btn > img {
+    height: 40px;
+  }
+  .col .pic-box {
+    position: unset;
+    right: unset;
+  }
+  .table-header {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tabular-list .row {
+    width: 300px;
+  }
+  .panel-menu {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .tabular-list .row {
+    width: 100%;
+  }
+  .panel-menu {
+    width: 100%;
+  }
+}
+
+/* ADD COURSE */
+
+@media screen and (max-width: 960px) {
+  .add-course {
+    width: 450px;
+    padding: 0;
+    margin: 30px auto;
+  }
+  .form-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 35px 0 25px 0;
+  }
+  .form {
+    box-shadow: 4px 5px 15px 1px rgba(39, 34, 34, 0.06);
+    border-radius: 15px;
+  }
+  .input-box {
+    margin: 25px auto 0 auto;
+    width: 100%;
+  }
+  .label {
+    font-size: 0.8rem;
+  }
+  .form-data:not(.form-options) {
+    padding: 13px;
+    font-size: 0.7rem;
+  }
+  .form-select-value {
+    padding: 13px;
+    font-size: 0.7rem;
+  }
+  .form-options {
+    border-radius: 20px;
+  }
+  .form-option {
+    padding: 15px 0;
+    font-size: 0.7rem;
+  }
+  .submit-btn {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .add-course {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .add-course {
+    width: 100%;
+  }
+}
+/*pagination*/
+.paginate {
+  text-align: center;
+}
+
+ul.paging-t {
+  display: inline-block;
+  min-width: 100px;
+  border-radius: 0px;
+  margin: 15px auto;
+}
+
+ul.paging-t li {
+  width: 34px;
+  height: 35px;
+  float: right;
+  padding: 3px;
+  text-align: center;
+  margin-left: 5px;
+  border-radius: 100%;
+  line-height: 27px;
+  font-family: iransans;
+  font-size: 14px;
+  margin: 0px 2px;
+}
+
+ul.paging-t li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #000;
+  text-decoration: none;
+  font-family: iran;
+}
+
+ul.paging-t li:not(.active):hover {
+  background: #e3e3e3;
+  -webkit-transition: background 0.15s ease-out;
+}
+
+.paginate li.active {
+  background-color: #23ccef;
+  color: #fff !important;
+}
+
+.paginate li.active a {
+  color: #fff !important;
+}
+
+.dataTables_wrapper {
+  width: 92%;
+  margin: 0 auto;
+}
